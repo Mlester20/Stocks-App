@@ -14,15 +14,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { LogOut } from "lucide-react";
 import NavItems from "./NavItems";
 
-const UserDropDown = () => {
+const UserDropDown = ({ user } : { user: User }) => {
 
   const router = useRouter();
   
   const handleSignOut = async () => {
-    router.push('/signin');
+    router.push('/sign-in');
   }
-
-  const user = { name: "Mark Lester", email: "suguitanmark123@gmail.com" }
 
   return (
     <DropdownMenu>
